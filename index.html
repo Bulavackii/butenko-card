@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ирина Бутенко – Визитка</title>
+  <meta name="description" content="Визитная карточка: Бутенко Ирина Евгеньевна — Заместитель руководителя Московско-Окского БВУ" />
+  <meta name="theme-color" content="#111111" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ирина Бутенко — визитка" />
+  <meta property="og:description" content="Заместитель руководителя Московско-Окского БВУ" />
+  <meta property="og:image" content="preview1.png" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --bg: #0f1115;
+      --fg: #e9eef5;
+      --muted: #9aa7b2;
+      --accent: #d1b06b;
+      --card: #171a21;
+      --btn: #222735;
+      --btn-fg: #e9eef5;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", "Noto Color Emoji";
+      background: var(--bg);
+      color: var(--fg);
+      display: grid;
+      place-items: start center;
+      padding: 32px 16px 64px;
+      line-height: 1.5;
+    }
+    .card {
+      width: 100%;
+      max-width: 720px;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .header {
+      display: grid;
+      grid-template-columns: 96px 1fr 96px;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo {
+      width: 96px; height: 96px; object-fit: contain;
+      filter: invert(1) brightness(1.2);
+    }
+    .photo {
+      width: 128px; height: 128px; object-fit: cover; border-radius: 12px; display: none;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin: 4px 0 0 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .subtitle { margin-top: 8px; color: var(--muted); }
+    .block { margin-top: 18px; }
+    .mono { font-variant-numeric: tabular-nums; }
+    a { color: var(--fg); }
+    .btn {
+      display: inline-block;
+      background: var(--btn);
+      color: var(--btn-fg);
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid #2a3142;
+    }
+    .footer {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .quote { margin-top: 18px; font-style: italic; color: var(--muted); }
+    @media (min-width: 680px) {
+      .photo { display: block; grid-column: 3; grid-row: 1 / span 3; }
+      .header { grid-template-columns: 96px 1fr 128px; }
+    }
+    /* Простая “версия для слабовидящих”: инверсия контраста */
+    .a11y:target .card, .a11y:target body { background: #fff; color: #000; }
+    .a11y:target .logo { filter: none; }
+    .a11y:target .btn { background: #000; color: #fff; border-color:#000; }
+  </style>
+</head>
+<body id="top">
+  <div class="card">
+    <div class="header">
+      <img src="gerb_white.jpg" alt="Герб" class="logo" />
+      <div>
+        <div style="color:#9aa7b2; font-weight:600;">Московско-Окское бассейновое водное управление<br/>Федерального агентства водных ресурсов</div>
+        <h1>БУТЕНКО</h1>
+        <h2>Ирина Евгеньевна</h2>
+      </div>
+      <img src="Бутенко.jpg" alt="Фото — Ирина Бутенко" class="photo" />
+    </div>
+
+    <div class="block">
+      <strong>Заместитель руководителя Московско-Окского БВУ</strong>
+    </div>
+
+    <div class="block mono">
+      <div>+7&nbsp;(929)&nbsp;572-18-35</div>
+    </div>
+
+    <div class="block">
+      улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140
+    </div>
+
+    <div class="block">
+      <a href="https://www.m-obvu.ru" target="_blank" rel="noopener">www.m-obvu.ru</a> ·
+      <a href="https://vk.com/club217101985" target="_blank" rel="noopener">vk.com</a>
+    </div>
+
+    <div class="quote">
+      «Всего одно знакомство может стать источником, из которого вырастет океан возможностей»
+    </div>
+
+    <div class="footer">
+      <a class="btn" href="irina-butenko.vcf" download>Скачать контакт</a>
+      <a class="btn" href="#a11y">Версия для слабовидящих</a>
+    </div>
+  </div>
+
+  <!-- Якорь для простого режима повышенной контрастности -->
+  <div id="a11y" class="a11y"></div>
+</body>
+</html>
